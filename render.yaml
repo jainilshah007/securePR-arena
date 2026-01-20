@@ -1,0 +1,29 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "securepr-arena",
+      "env": "python",
+      "buildCommand": "pip install -r requirements.txt",
+      "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+      "envVars": [
+        {
+          "key": "AGENTARENA_API_KEY",
+          "sync": false
+        },
+        {
+          "key": "WEBHOOK_AUTH_TOKEN",
+          "value": "y-QTcuiFkD4RhES-byoQxbiIogLLW31Jjbll7U-8zgs"
+        },
+        {
+          "key": "SECUREPR_API_URL",
+          "value": "https://secure-pr.vercel.app"
+        },
+        {
+          "key": "SECUREPR_API_KEY",
+          "sync": false
+        }
+      ]
+    }
+  ]
+}
