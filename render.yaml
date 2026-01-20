@@ -17,7 +17,7 @@
         },
         {
           "key": "SECUREPR_API_URL",
-          "value": "https://secure-pr.vercel.app"
+          "value": "https://securepr.onrender.com"
         }
       ]
     }
