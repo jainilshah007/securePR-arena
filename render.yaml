@@ -18,10 +18,6 @@
         {
           "key": "SECUREPR_API_URL",
           "value": "https://secure-pr.vercel.app"
-        },
-        {
-          "key": "SECUREPR_API_KEY",
-          "sync": false
         }
       ]
     }

@@ -11,7 +11,6 @@ class Settings(BaseSettings):
     
     # SecurePR Production API
     securepr_api_url: str
-    securepr_api_key: str
     
     # Optional
     temp_dir: str = "/tmp/arena_repos"

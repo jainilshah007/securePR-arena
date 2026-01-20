@@ -9,8 +9,6 @@ class SecurePRClient:
     
     def __init__(self):
         self.api_url = settings.securepr_api_url.rstrip('/')
-        self.api_key = settings.securepr_api_key
-        self.headers = {"Authorization": f"Bearer {self.api_key}"}
     
     async def scan_repository(
         self, 
@@ -64,8 +62,7 @@ class SecurePRClient:
         async with httpx.AsyncClient(timeout=300.0) as client:  # 5 min timeout for scanning
             response = await client.post(
                 f"{self.api_url}/api/scan",
-                files=files,
-                headers=self.headers
+                files=files
             )
             response.raise_for_status()
             return response.json(), file_mapping
